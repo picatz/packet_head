@@ -1,3 +1,4 @@
+require 'pry'
 require "packetgen"
 require "command_lion"
 require "colorize"
@@ -9,7 +10,7 @@ module PacketHead
 
   CommandLion::App.run do
     name "Packet Head".colorize(:yellow)
-    version "1.0.0"
+    version PacketHead::VERSION
     description "Streaming captured packet headers straight to the command-line."
 
     command :capture do
@@ -22,7 +23,7 @@ module PacketHead
         loop do
           while packet = capture.next
             begin
-              PacketGen.parse(packet).headers.map(&:class).map {|h| h.to_s.split("::").last }.join(" - ")
+              puts PacketGen.parse(packet).headers.map(&:class).map {|h| h.to_s.split("::").last }.join(" - ")
             rescue
               # some error, yolo
               nil
