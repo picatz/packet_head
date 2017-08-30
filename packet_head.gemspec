@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Streaming packet header types to the command-line.}
   #spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/picatz/packet_head"
   spec.license       = "MIT"
 
   spec.files         = Dir['lib/**/*.rb']
