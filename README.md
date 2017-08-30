@@ -40,6 +40,28 @@ You can also read a pcap/pcapng file's headers.
 
     $ packet_head read name.pcap
 
+## Help Menu
+
+Without any argument, the application defaults to a help menu.
+
+```shell
+Packet Head
+
+VERSION
+1.0.0
+
+DESCRIPTION
+Streaming captured packet headers straight to the command-line.
+
+COMMANDS
+capture    Capture from a given network interface ( default: en0 ).
+  snaplen  Amount of data for each frame that is actually captured ( default: 65535 ).
+  promisc  Capture all traffic received rather than only what's meant to receive ( default: true ).
+  buffer   Read time out in milliseconds when capturing packets -- 0 means no time out ( default: 1 ).
+
+read       Read a given pcap file's packet headers to STDOUT.
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
