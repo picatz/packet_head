@@ -1,4 +1,3 @@
-require 'pry'
 require "packetgen"
 require "command_lion"
 require "colorize"
